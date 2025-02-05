@@ -1,3 +1,6 @@
+const menuList={
+    ulol : '<a href="#">menu</a><a href="#">tel:</a><a href="#">mail:</a>'
+}
 window.addEventListener('DOMContentLoaded',menuFromLanding);
 function menuFromLanding(){
     let menuDiv=document.createElement('div'); /* maybe NAV */
@@ -19,17 +22,43 @@ function menuFromLanding(){
     document.querySelector('#menuDiv').append(stickThree);
     stickThree.classList.add('lineMenu');
 
-    let sheetsMenu=document.createElement('div');
-    sheetsMenu.classList.add('openMenu');
-    document.querySelector('body').prepend(sheetsMenu);
+   
     document.querySelector('#menuDiv').addEventListener('click',openMenu);
+
+   
+
     function openMenu(){
+        let sheetsMenu=document.createElement('div');
+        sheetsMenu.classList.add('openMenu');
+        document.querySelector('body').prepend(sheetsMenu);
         console.log('open');
-            document.querySelector('.openMenu').style.background="green";
+            
+            
             // document.querySelector('sheetsMenu').classList.add('openMenu');
         setTimeout(()=>{
-            document.querySelector('.openMenu').style.height="100vh;";
-        },100)
+            document.querySelector('.openMenu').style.cssText=`
+                height:100vh;
+                opacity:1;
+                font-size:33px;
+                `;
+            document.querySelector('.openMenu').style.background="green";
+        },100);
+        document.querySelector('.openMenu').innerHTML=`${menuList.ulol}`;
+        document.querySelector('.openMenu').addEventListener('click',menuClose);
+    }//menuOpen
+    function menuClose(){
+        document.querySelector('.openMenu').style.cssText=`
+                height:0vh;
+                transition:all ease 1s;
+                bottom:0;
+                top:100vh;
+                opacity:0;
+                font-size:0;
+                `;
+                setTimeout(()=>{
+                    document.querySelector('.openMenu').remove();
+
+                },300)
     }
 }
 // menuFromLanding();
