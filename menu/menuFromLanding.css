@@ -2,9 +2,33 @@
     margin:0;
     padding:0;
 }
-#lineMenu{
+.lineMenu{
     display:block;
     width:70px;
     height:3px;
-    
+    z-index:99;
+    background: green; /* this color line in menu */
+    opacity:1;
+}
+.lineMenu:nth-child(2){
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#menuDiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    flex-direction: column;
+}
+.openMenu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:10vh;
+    background-color: burlywood;
+    top:0;
+    position:absolute;
+    transition:ease 1s;
 }
