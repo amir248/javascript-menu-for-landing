@@ -5,7 +5,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
 
 const menuList={
-    ulol : '<a href="https://qucu.ru">QUCU.ru</a><a href="https://nasobe.ru">NASOBE.RU</a><a href="https://superp.ru">SUPERP.RU</a><a href="https://wa.clck.bar/79528885656?text=Hi!%20I%27m%20need%20landing%20page.">Amir Dzhan</a>',
+    ulol : '<a href="https://qucu.ru">QUCU.ru</a><a href="https://nasobe.ru">NASOBE.RU</a><a href="https://madness.qucu.ru/commercialOffer">Commercial Offer</a><a href="https://wa.clck.bar/79528885656?text=Hi!%20I%27m%20need%20landing%20page.">Amir Dzhan</a>',
     background : "green",
     pathMenuList : "main"
 }
